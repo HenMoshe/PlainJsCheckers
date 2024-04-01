@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+#player-setup {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+#player-setup input[type="text"] {
+    margin: 0 10px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#player-setup input[type="text"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+#player-setup button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#player-setup button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 2px;
+    padding: 8px;
+    background: #333; /* Dark background to contrast with the tiles */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.tile, .tile-possible-move {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s; /* Smooth transition for marked tiles */
+}
+
+.black {
+    background-color: #444;
+    border-radius: 4px; /* Rounded corners for tiles */
+}
+
+.white {
+    background-color: #fff;
+    border-radius: 4px; /* Rounded corners for tiles */
+}
+
+.tile-possible-move {
+    background-color: #ffdd59;
+}
+
+.piece {
+    width: 50px; /* Slightly smaller to fit well in the tile */
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Soft shadow for depth */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+.piece:hover {
+    transform: scale(1.1); /* Slightly enlarge pieces on hover */
+}
+
+.red-piece {
+    background-color: red;
+}
+
+.black-piece {
+    background-color: black;
+}
+#game-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.active-player {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#player-info span {
+    display: block; /* Or inline-block based on your layout preference */
+    margin: 10px 0;
+}
+
+#restartGame {
+    margin-top: 20px;
+}
